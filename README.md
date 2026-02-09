@@ -12,7 +12,7 @@
 
 <div align="center">
 
-  [[Paper]](./paper.pdf)
+  <!-- [[Paper]](./paper.pdf) -->
   [[arXiv]](https://arxiv.org/abs/2602.06382)
   <!-- [[Website]](https://hellod035.github.io/ULC/) -->
   🎬 Videos and websites coming soon in March !
