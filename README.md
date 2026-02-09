@@ -2,12 +2,18 @@
   <i>Now You See That</i>: Learning End-to-End Humanoid
   
    Locomotion from Raw Pixels
+
 </h1>
 
 <div align="center">
 
+  Wandong Sun, Yongbo Su, Leoric Huang, Alex Zhang, Dwyane Wei, Mu San, Daniel Tian, Ellie Cao, Finn Yan, Ethan Xie, Zongwu Xie
+</div>
+
+<div align="center">
+
   [[Paper]](./paper.pdf)
-  <!-- [[arXiv]](https://github.com/Hellod035/Now_You_See_That) -->
+  [[arXiv]](https://arxiv.org/abs/2602.06382)
   <!-- [[Website]](https://hellod035.github.io/ULC/) -->
   🎬 Videos and websites coming soon in March !
 </div>
