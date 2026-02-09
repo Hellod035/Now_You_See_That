@@ -14,14 +14,14 @@
 
 
 
-<!-- ```bibtex
-@misc{sun2025ulcunifiedfinegrainedcontroller,
-      title={ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation}, 
-      author={Wandong Sun and Luying Feng and Baoshi Cao and Yang Liu and Yaochu Jin and Zongwu Xie},
-      year={2025},
-      eprint={2507.06905},
+```bibtex
+@misc{sun2026thatlearningendtoendhumanoid,
+      title={Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels}, 
+      author={Wandong Sun and Yongbo Su and Leoric Huang and Alex Zhang and Dwyane Wei and Mu San and Daniel Tian and Ellie Cao and Finn Yan and Ethan Xie and Zongwu Xie},
+      year={2026},
+      eprint={2602.06382},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2507.06905}, 
+      url={https://arxiv.org/abs/2602.06382}, 
 }
-``` -->
+```
