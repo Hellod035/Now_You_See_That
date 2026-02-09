@@ -7,7 +7,9 @@
 
 <div align="center">
 
-  Wandong Sun, Yongbo Su, Leoric Huang, Alex Zhang, Dwyane Wei, Mu San, Daniel Tian, Ellie Cao, Finn Yan, Ethan Xie, Zongwu Xie
+  Wandong Sun, Yongbo Su, Leoric Huang, Alex Zhang, Dwyane Wei, Mu San
+  <br>
+  Daniel Tian Ellie Cao, Finn Yan, Ethan Xie, Zongwu Xie
 </div>
 
 <div align="center">
