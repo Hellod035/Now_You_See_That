@@ -9,7 +9,7 @@
 
   Wandong Sun, Yongbo Su, Leoric Huang, Alex Zhang, Dwyane Wei, Mu San
   <br>
-  Daniel Tian Ellie Cao, Finn Yan, Ethan Xie, Zongwu Xie
+  Daniel Tian, Ellie Cao, Finn Yan, Ethan Xie, Zongwu Xie
 </div>
 
 <div align="center">
