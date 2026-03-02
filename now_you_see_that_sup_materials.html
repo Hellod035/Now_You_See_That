@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Vision-Based Humanoid Locomotion">
+  <meta name="keywords" content="Humanoid Locomotion, Humanoid Robotics, Now You See That">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./web/static/css/bulma.min.css">
+  <link rel="stylesheet" href="./web/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./web/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./web/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./web/static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./web/static/js/fontawesome.all.min.js"></script>
+  <script src="./web/static/js/bulma-carousel.min.js"></script>
+  <script src="./web/static/js/bulma-slider.min.js"></script>
+  <script src="./web/static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <i>Now You See That</i>: Learning End-to-End Humanoid Locomotion from Raw Pixels
+            </h1>
+            <div class="is-size-5 publication-authors author-list">
+              <span class="author-block">
+                <a href="https://github.com/Hellod035">Wandong
+                  Sun</a><sup>1, 2, *</sup>,</span>
+              <span class="author-block">Yongbo Su<sup>1, 2, *</sup>,</span>
+              <span class="author-block">Leoric Huang<sup>2, *</sup>,</span>
+              <span class="author-block">Alex Zhang<sup>2</sup>,</span>
+              <span class="author-block">Dwyane Wei<sup>2</sup>,</span>
+              <span class="author-block">Mu San<sup>2</sup>,</span>
+              <br>
+              <span class="author-block">Daniel Tian<sup>2</sup>,</span>
+              <span class="author-block">Ellie Cao<sup>2</sup>,</span>
+              <span class="author-block">Finn Yan<sup>2, †</sup>,</span>
+              <span class="author-block">Ethan Xie<sup>2, †</sup>,</span>
+              <span class="author-block">Zongwu Xie<sup>1, †</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors author-affiliations">
+              <span class="author-block"><sup>1</sup>Harbin Institute of Technology, </span>
+              <span class="author-block"><sup>2</sup>Honor Robot Team</span>
+            </div>
+
+            <div class="is-size-6 publication-authors author-notes">
+              <span class="author-block"><sup>*</sup>Equal contribution,</span>
+              <span class="author-block"><sup>†</sup>Corresponding authors</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="./web/static/paper/paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2602.06382" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://youtu.be/kEwI7C2uZho?si=89i2k2IivBCMOvp5"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.bilibili.com/video/BV1X4GAzyEGv"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>BiliBili</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/Hellod035/ULC" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <h2 class="title is-2 has-text-centered" style="margin-bottom: 1.5rem;">Real World Results</h2>
+
+      <div class="notification is-info is-light has-text-centered" style="margin-bottom: 2rem;">
+        <strong>🎧 Turn on the sound</strong> for the full experience!
+      </div>
+
+      <div class="columns is-centered">
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Wild Parkour 1</h2>
+            <video id="parkour-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/multi_scene_parkour_1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Wild Parkour 2</h2>
+            <video id="parkour-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/multi_scene_parkour_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns is-centered">
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Up 1</h2>
+            <video id="uptair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/up_stair_1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Up 2</h2>
+            <video id="uptair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/up_stair_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Up 3</h2>
+            <video id="uptair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/up_stair_3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Up 4</h2>
+            <video id="uptair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/up_stair_4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Down 1</h2>
+            <video id="downstair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/down_stair_1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Down 2</h2>
+            <video id="downstair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/down_stair_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Stair Down 3</h2>
+            <video id="downstair-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/down_stair_3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="columns is-centered">
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Step Stone</h2>
+            <video id="step-stone-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/step_stone.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Indoor Parkour</h2>
+            <video id="indoor-parkour-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/indoor_parkour.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-3" style="margin-bottom: 0.8rem;">Balance Recovery</h2>
+            <video id="balance-video" controls loop playsinline style="height: 400px; width: auto;">
+              <source src="./web/static/videos/extreme_balance.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="margin-bottom: 0.8rem;">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Achieving robust vision-based humanoid locomotion remains challenging due to two fundamental issues: the
+              sim-to-real gap introduces significant perception noise that degrades performance on fine-grained tasks,
+              and training a unified policy across diverse terrains is hindered by conflicting learning objectives. To
+              address these challenges, we present an end-to-end framework for vision-driven humanoid locomotion.
+            </p>
+            <p>
+              For robust sim-to-real transfer, we develop a high-fidelity depth sensor simulation that captures stereo
+              matching artifacts and calibration uncertainties inherent in real-world sensing. We further propose a
+              vision-aware behavior distillation approach that combines latent space alignment with noise-invariant
+              auxiliary tasks, enabling effective knowledge transfer from privileged height maps to noisy depth
+              observations. For versatile terrain adaptation, we introduce terrain-specific reward shaping integrated
+              with
+              multi-critic and multi-discriminator learning, where dedicated networks capture the distinct dynamics and
+              motion priors of each terrain type.
+            </p>
+            <p>
+              We validate our approach on two humanoid platforms equipped with different stereo depth cameras. The
+              resulting policy demonstrates robust performance across diverse environments, seamlessly handling extreme
+              challenges such as high platforms and wide gaps, as well as fine-grained tasks including bidirectional
+              long-term staircase traversal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Main Figure -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3" style="margin-bottom: 0.8rem;">Method Overview</h2>
+          <div class="publication-image">
+            <img src="./web/static/images/method.png" alt="Method Overview"
+              style="width: 60%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: none;" />
+            <p class="has-text-centered" style="margin-top: 10px; font-style: italic; color: #666;">
+              Our framework consists of two stages: (1)
+              Privileged RL Training: A teacher policy is trained with height scan observa-
+              tions using multi-critic and multi-discriminator learning, where terrain-specific
+              reward shaping and dedicated value networks handle diverse terrain categories
+              (stairs/platforms, gaps, rough terrain). (2) Vision-Aware Distillation: The
+              privileged policy is distilled into a deployment policy operating on augmented
+              depth images, combining behavior cloning with denoising objectives for robust
+              sim-to-real transfer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3" style="margin-bottom: 0.8rem;">Augmentation Pipeline</h2>
+          <div class="publication-image">
+            <img src="./web/static/images/aug.png" alt="Augmentation Pipeline"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: none;" />
+            <p class="has-text-centered" style="margin-top: 10px; font-style: italic; color: #666;">
+              Visualization of the depth augmentation pipeline. Starting from clean left and right depth images, the
+              pipeline sequentially applies: (1) stereo fusion,
+              (2) random convolution, (3) Gaussian noise, (4) Perlin noise, (5) scale randomization, (6) zero pixel
+              failures, (7) max pixel failures, (8) depth clipping and
+              spatial cropping to produce realistic depth observations for sim-to-real transfer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3" style="margin-bottom: 0.8rem;">More Augmentation Results</h2>
+          <div class="publication-image">
+            <img src="./web/static/images/many_aug.png" alt="Augmentation Pipeline"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: none;" />
+            <p class="has-text-centered" style="margin-top: 10px; font-style: italic; color: #666;">
+              Additional depth augmentation examples across diverse terrains. Each triplet shows (left to right): left
+              camera depth, right camera depth, and augmented
+              output before spatial cropping. Depth values are normalized to [0, 2] m and rendered as color maps (cool =
+              near, warm = far). The augmented images exhibit
+              realistic stereo fusion holes (black regions), depth-dependent noise, and structured Perlin patterns while
+              preserving terrain geometry essential for locomotion
+              control.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
