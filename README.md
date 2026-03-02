@@ -16,7 +16,7 @@
 
 
   [[arXiv]](https://arxiv.org/abs/2602.06382)
-  [[Website]](https://github.com/Hellod035/Now_You_See_That)
+  [[Website]](https://hellod035.github.io/Now_You_See_That/)
 
 </div>
 
