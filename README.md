@@ -14,10 +14,10 @@
 
 <div align="center">
 
-  <!-- [[Paper]](./paper.pdf) -->
+
   [[arXiv]](https://arxiv.org/abs/2602.06382)
-  <!-- [[Website]](https://hellod035.github.io/ULC/) -->
-  🎬 Videos and websites coming soon in March !
+  [[Website]](https://github.com/Hellod035/Now_You_See_That)
+
 </div>
 
 
