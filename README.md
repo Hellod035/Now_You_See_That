@@ -1,10 +1,16 @@
 <h1 align="center">
-  <i>Now You See That</i><br/>
-  Learning End-to-End Humanoid Locomotion from Raw Pixels
+  <i>Now You See That</i>
 </h1>
 
+<h3 align="center">
+  Learning End-to-End Humanoid Locomotion from Raw Pixels
+</h3>
+
 <p align="center">
-  <a href="#"><img alt="Venue" src="https://img.shields.io/badge/RSS-2026-4c8bf5?style=for-the-badge"></a>
+  <a href="#"><img alt="RSS 2026" src="https://img.shields.io/badge/Accepted%20to-RSS%202026-1f6feb?style=for-the-badge&labelColor=0d1b3d&logo=bookstack&logoColor=white"></a>
+</p>
+
+<p align="center">
   <a href="https://arxiv.org/abs/2602.06382"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2602.06382-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white"></a>
   <a href="https://hellod035.github.io/Now_You_See_That/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-228be6?style=for-the-badge&logo=githubpages&logoColor=white"></a>
   <a href="https://www.bilibili.com/video/BV1ApcXzGEkP/"><img alt="Promo" src="https://img.shields.io/badge/Promo-Video-fb7299?style=for-the-badge&logo=bilibili&logoColor=white"></a>
@@ -12,19 +18,19 @@
 
 <p align="center">
   <a href="https://github.com/Hellod035">Wandong Sun</a><sup>1,2,*</sup> &nbsp;·&nbsp;
-  Yongbo Su<sup>1,2,*</sup> &nbsp;·&nbsp;
-  Leoric Huang<sup>2,*</sup> &nbsp;·&nbsp;
-  Alex Zhang<sup>2</sup> &nbsp;·&nbsp;
-  Dwyane Wei<sup>2</sup> &nbsp;·&nbsp;
-  Mu San<sup>2</sup> &nbsp;·&nbsp;
-  Daniel Tian<sup>2</sup>
+  <a href="#">Yongbo Su</a><sup>1,2,*</sup> &nbsp;·&nbsp;
+  <a href="#">Leoric Huang</a><sup>2,*</sup> &nbsp;·&nbsp;
+  <a href="#">Alex Zhang</a><sup>2</sup> &nbsp;·&nbsp;
+  <a href="#">Dwyane Wei</a><sup>2</sup> &nbsp;·&nbsp;
+  <a href="#">Mu San</a><sup>2</sup> &nbsp;·&nbsp;
+  <a href="#">Daniel Tian</a><sup>2</sup>
   <br/>
-  Ellie Cao<sup>2</sup> &nbsp;·&nbsp;
-  Baoshi Cao<sup>1</sup> &nbsp;·&nbsp;
-  Yang Liu<sup>1</sup> &nbsp;·&nbsp;
-  Finn Yan<sup>2,†</sup> &nbsp;·&nbsp;
-  Ethan Xie<sup>2,†</sup> &nbsp;·&nbsp;
-  Zongwu Xie<sup>1,†</sup>
+  <a href="#">Ellie Cao</a><sup>2</sup> &nbsp;·&nbsp;
+  <a href="#">Baoshi Cao</a><sup>1</sup> &nbsp;·&nbsp;
+  <a href="#">Yang Liu</a><sup>1</sup> &nbsp;·&nbsp;
+  <a href="#">Finn Yan</a><sup>2,†</sup> &nbsp;·&nbsp;
+  <a href="#">Ethan Xie</a><sup>2,†</sup> &nbsp;·&nbsp;
+  <a href="#">Zongwu Xie</a><sup>1,†</sup>
 </p>
 
 <p align="center">
