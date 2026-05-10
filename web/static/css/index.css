@@ -1,5 +1,176 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  background: #fafbfc;
+  color: #222;
+}
+
+/* ----- Hero / title block ----- */
+.hero-body {
+  padding: 3.5rem 1.5rem 2.5rem;
+}
+
+.publication-title {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 0.9rem !important;
+}
+
+.publication-venue-badge {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.publication-venue-badge span {
+  display: inline-block;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, hsl(204, 86%, 53%), hsl(217, 71%, 53%));
+  color: #fff;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 10px rgba(54, 138, 230, 0.25);
+}
+
+.publication-links {
+  margin-top: 1.5rem;
+}
+
+.publication-links .link-block .button {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.publication-links .link-block .button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* ----- Section headings ----- */
+.section {
+  padding: 2.5rem 1.5rem;
+}
+
+.section-heading {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.6rem !important;
+  padding-bottom: 0.45rem;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, hsl(204, 86%, 53%), hsl(217, 71%, 53%));
+}
+
+/* ----- Abstract ----- */
+.abstract-content {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.abstract-content p + p {
+  margin-top: 0.9rem;
+}
+
+/* ----- Sound hint banner ----- */
+.sound-hint {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+}
+
+/* ----- Video grid cards ----- */
+.results-section .columns.is-multiline {
+  margin-top: 0.5rem;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1rem 1rem 1.1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.video-card .video-title {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin: 0 0 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.video-card video {
+  width: 100%;
+  height: auto;
+  background: #000;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ----- Figure cards (method, augmentation) ----- */
+.figure-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.4rem 1.4rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.figure-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.figure-image-narrow {
+  max-width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .figure-image-narrow {
+    max-width: 100%;
+  }
+}
+
+.figure-caption {
+  margin-top: 0.9rem;
+  font-style: italic;
+  color: #5a5a5a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 92%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
