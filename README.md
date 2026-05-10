@@ -41,6 +41,16 @@
 
 ---
 
+<p align="center">
+  <a href="https://www.bilibili.com/video/BV1ApcXzGEkP/" title="Watch the promo video on Bilibili">
+    <img src="assets/promo_cover.jpg" alt="Promo video — click to watch on Bilibili" width="720"/>
+  </a>
+  <br/>
+  <sub>▶︎ Click the cover to watch the promo video on Bilibili</sub>
+</p>
+
+---
+
 ## Overview
 
 We present an end-to-end framework for vision-driven humanoid locomotion that takes raw depth pixels as input and produces robust whole-body control across diverse, challenging terrains.
